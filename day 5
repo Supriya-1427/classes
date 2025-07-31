@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="scipt.js"></script>
+</body>
+</html>
+
+const obj={
+    firstname:"jack",
+    lastname:"rose",
+    age:19,
+    graduated:false,
+    joiningDate:new Date("05/07/2024"),
+    number_of_days:()=>{
+        let curr=new Date()
+        return curr-obj.joiningDate
+
+    }
+}
+console.log(
+    Math.floor(Number_of_days()/(1000*3600*24))
+)
