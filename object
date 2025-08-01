@@ -1,9 +1,0 @@
-class Person{
-    constructor(firstname,age){
-        this.firstname=firstname;
-        this.age=age;
-    }
-   
-}
-let obj2=new Person("Rose",19)
-obj2.firstname
