@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h1>Registration Form</h1>
+        <form onsubmit="return handleForm">
+            <label for="name">Full Name</label>
+            <input type="text"id="name">
+            <div id="Name Error"></div><br>
+           
+
+            <label for="Email">Email Id</label>
+            <input type="text"id="Email">
+            <div id="Email Error"></div><br>
+
+
+            <label for="Password">Password</label>
+            <input type="text"id="Password">
+            <div id="Password Error"></div><br>
+            
+
+            <label for="Phone">Phone no</label>
+            <input type="text"id="Phone">
+            <div id="no Error"></div><br>
+
+         <button type="Submit">Submit</button>
+        </form>
+    </section>
+
+
+
+
+///script.js
+
+function validateName(Name){
+    const regex=/^[A-Za-z\s]+$/;
+    if(!regex.text(Name)){
+        return "Name must contains alphabets"
+     }
+     return "valid"
+}
+
+function validateEmail(Email){
+    const regex=/^[a-zA-Z0-9.-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    if(!regex.text(Email)){
+        return "Email is not vaild"
+    }
+    return "valid"
+}
+
+function validatePassword(Password){
+    const regex=/^(?=.*[A-Z])(?=.*\d).{8,}$/;
+    if(!regex.text(Password)){
+        return "Password must contains atleast 1 no and capital,length minimum 8"
+    }
+    return "valid"
+  
+}
+
+function validatePhone(Phone){
+    const regex=/^[6789][0-9]{10}$/;
+    if(!regex.text(Phone)){
+        return "Phone no must contains no 6789 and no must 0-9"
+    }
+    return "valid"
+  
+}
+
+function handleform(){
+    let Name=document.getElementById("Name").value
+    let Email=document.getElementById("Email").value
+    let Password=document.getElementById("Password").value
+    let Phone=document.getElementById("Phone").value
+
+    let validateName= validateName(Name)
+    let validateEmail= validateEmail(Email)
+    let validatePassword= validatePassword(Password)
+    let validatePhone= validatePhone(Phone)
+}
+if(validateNumber=="valid"&&validateEmail=="valid"&&)
+
+{
+    document.getElementById("Name").innerText=validateName=="valid"?"":validateName
+    document.getElementById("Email").innerText=validateEmail=="valid"?"":validateEmail
+    document.getElementById("Password").innerText=validatePassword=="valid"?"":validatePassword
+    document.getElementById("numberError").innerText=validatePhone=="valid"?"":validatePhone
+
+}
